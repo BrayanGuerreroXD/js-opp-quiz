@@ -1,4 +1,3 @@
-import { data } from './data/data.js'
-import { Question } from './models/question.js'
+import { questions } from './data/questions.js'
 
-const data = data
+console.log(questions);
