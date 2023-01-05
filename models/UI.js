@@ -16,14 +16,31 @@ export class UI{
      * @param {string[]} choices the choices of the question
      */
 
-    showChoices(choices) {
+    showChoices(choices, callback) {
         const choicesContainer =  document.getElementById('choices')
+        choicesContainer.innerHTML = ''
 
         choices.map(choice => {
             const button = document.createElement('button')
             button.innerText = choice
             button.className = 'button'
+            button.addEventListener('click', () => callback(choice))
             choicesContainer.append(button)
         })
+    }
+
+    /**
+     * 
+     * @param {number} score total score
+     */
+
+    showScores(score) {
+        const quizEndHTML = `
+        <h1>Result</h1>
+        <h2>Your score: ${score}</h2>
+        `
+
+        const element = document.getElementById('quiz')
+        element.innerHTML = quizEndHTML
     }
 }
