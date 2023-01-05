@@ -12,6 +12,6 @@ export const data = [
     {
         question: 'Qué lenguaje no sirve para estilizar sitios web?',
         choices: ['stylus', 'less', 'sass', 'PostCSS', 'NextCSS'],
-        answer: 'PostCSS'
+        answer: 'NextCSS'
     }
 ]
